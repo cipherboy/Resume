@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Alexander Scheel | Resume</title>
+        <meta name="author" content="Alexander Scheel">
+        <meta name="HandheldFriendly" content="true">
+        <script type="text/javascript">
+            /**
+             * jCanvas v2.0 - A 2D HTML5 Canvas API
+             * 
+             * Copyright (C) 2011, 2013 Alex Scheel
+             * All rights reserved.
+             * Licensed under BSD 2 Clause License:
+             *
+             * Redistribution and use in source and binary forms, with or without
+             * modification, are permitted provided that the following conditions are met:
+             *
+             * - Redistributions of source code must retain the above copyright notice,
+             *   this list of conditions and the following disclaimer.
+             * - Redistributions in binary form must reproduce the above copyright notice, 
+             *   this list of conditions and the following disclaimer in the documentation 
+             *   and/or other materials provided with the distribution.
+             *
+             * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+             * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+             * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+             * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+             * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+             * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+             * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+             * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+             * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+             * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+             * POSSIBILITY OF SUCH DAMAGE.
+            **/
+            
+            
+            function jCanvasDraw(canvas,ctx,frame){var commands=frame.split(',');for(var i=0;i<commands.length;i++){var temp=commands[i].split(':');var command=temp[0];var arguments=new Array();for(var j=1;j<temp.length;j++){arguments[j-1]=temp[j]}if(command=='a'){if(arguments[5]==''){ctx.arc(arguments[0],arguments[1],arguments[2],arguments[3],arguments[4])}else{ctx.arc(arguments[0],arguments[1],arguments[2],arguments[3],arguments[4],arguments[5])}}else if(command=='at'){ctx.arcTo(arguments[0],arguments[1],arguments[2],arguments[3],arguments[4])}else if(command=='b'){ctx.beginPath()}else if(command=='c'){ctx.closePath()}else if(command=='cs'){ctx.clearRect(0,0,canvas.width,canvas.height)}else if(command=='cw'){ctx.canvas.width=ctx.canvas.width}else if(command=='f'){ctx.fill()}else if(command=='fs'){ctx.fillStyle=arguments[0]}else if(command=='j'){ctx.lineJoin=arguments[0]}else if(command=='l'){ctx.lineTo(arguments[0],arguments[1])}else if(command=='m'){ctx.moveTo(arguments[0],arguments[1])}else if(command=='q'){ctx.quadraticCurveTo(arguments[0],arguments[1],arguments[2],arguments[3])}else if(command=='r'){ctx.fillRect(arguments[0],arguments[1],arguments[2],arguments[3])}else if(command=='ss'){ctx.strokeStyle=arguments[0]}else if(command=='s'){ctx.stroke()}else if(command=='w'){ctx.lineWidth=arguments[0]}else if(command=='/'){}else if(command==''){}}}
+        </script>
+        <style type="text/css">
+            /**
+             * Font facing
+             * Bitstream Vera Sans Mono <3
+            **/
+            @font-face {
+                font-family: 'Bitstream';
+                src: url('https://github.com/machinezilla/sdlblocks/raw/master/Bitstream-Vera-Sans-Mono.ttf');
+            }
+                        
+            /**
+             * Generic Styling
+            **/
+            body {
+                border: none;
+                margin: 0;
+                padding: 0;
+                
+                background-color: #dddddb;
+                color: #232323;
+                
+                font-size: 0.9em;
+                font-family: 'Bitstream', monospace;
+                
+                line-height: 18px;
+            }
+            
+            h1, h2, h3, h4 {
+                color: #3366AA;
+            }
+            
+            /**
+             * Header styling
+            **/
+            header#page-header {
+                border: none;
+                margin: 0;
+                padding: 0;
+                
+                width: 800px;
+                height: 50px;
+                margin: 0 auto;
+                
+                position: relative;
+            }
+            
+            h1#header-maintitle {
+                color: #3366AA;
+                
+                font-style: italic;
+                text-align: center;
+            }
+            
+            div#header-tab {
+                background-color: #3366AA;
+                color: #efefef;
+                
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                box-shadow: 7px 0px 5px #AAAAAA;
+                
+                width: 200px; 
+                height: 25px;
+                font-size: 10px;
+                line-height: 22px;
+                text-align: center;
+                
+                position: relative;
+                top: 8px;
+                
+                margin: 0 auto;
+            }
+            
+            h2#header-title {
+                color: #efefef;
+            }
+            
+            /**
+             * Main page styling
+            **/
+            div#page-main {
+                border: none;
+                margin: 0;
+                padding: 10px;
+                padding-top: 5px;
+                
+                border: 1px dashed #3366AA;
+                border-radius: 2px;
+                width: 800px;
+                margin: 0 auto;
+                
+                position: relative;
+                top: -18px;
+                
+                box-shadow: 7px 7px 5px #AAAAAA;
+            }
+            
+            div#page-main h3,h4 {
+                margin: 0px;
+                padding: 0px;
+                border: none;
+            }
+            
+            div#page-main h3 {
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+            
+            div#page-main p {
+                margin: 0px;
+                padding: 0px;
+                border: none;
+                
+                margin-bottom: 10px;
+            }
+            
+            a.link, a.email {
+                text-decoration: underline;
+                color: #3366AA;
+            }
+            
+            a.link:after {
+                content: " \00BB";
+            }
+            
+            code {
+                font-size: 11px;
+                font-family: monospace;
+            }
+            
+            canvas.bullet {
+                margin: 2px;
+                margin-left: 10px;
+                margin-right: 5px;
+            }
+            
+            article.main-article {
+                padding: 5px;
+            }
+            
+            header.main-header {
+            }
+            
+            section.main-section {
+                margin-left: 20px;
+            }
+            
+            footer.main-footer {
+                text-align: center;
+            }
+            
+            span.title-footnote {
+                color: #232323;
+                font-style: italic;
+                font-weight: normal;
+                font-size: 12px;
+                margin-left: 5px;
+            }
+            
+            h4.products-subtitle a {
+                text-decoration: underline;
+            }
+            
+            h4.work-subtitle a {
+                text-decoration: underline;
+            }
+            
+            span.subtitle-dates {
+                text-decoration: none !important;
+                font-size: 12px;
+                
+                padding-left: 20px;
+            }
+            
+            article#info-content {
+                position: relative;
+            }
+            
+            div#info-left {
+                width: 200px;
+                
+                position: absolute;
+                top: 0px;
+                left: 15px;
+            }
+            
+            div#info-center {
+                width: 200px;
+                margin: 0 auto;
+                
+                text-align: center;
+            }
+            
+            div#info-right {
+                width: 200px;
+                
+                position: absolute;
+                top: 0px;
+                right: 15px;
+            }
+            
+            .center {
+                text-align: center;
+            }
+            
+            /**
+             * Footer styling
+            **/
+            footer#page-footer {
+                width: 800px;
+                margin: 0 auto;
+                
+                position: relative;
+                
+                margin-bottom: 15px;
+            }
+            
+            div#footer-left {
+                width: 200px;
+                
+                position: absolute;
+                top: 0px;
+                left: 15px;
+            }
+            
+            div#footer-center {
+                width: 300px;
+                margin: 0 auto;
+                
+                text-align: center;
+            }
+            
+            div#footer-right {
+                width: 200px;
+                
+                position: absolute;
+                top: 0px;
+                right: 15px;
+            }
+            
+            span.indent {
+                margin-left: 3em;
+                
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="page-header">
+            <div id="header-tab"><h2 id="header-title">Alexander Scheel</h2></div>
+        </header>
+        <div id="page-main">
+            <article id="main-info" class="main-article">
+                <article id="info-content" class="main-article">
+                    <div id="info-left">
+                        <div id="info-name">Alexander&nbsp;Maurice&nbsp;Scheel</div>
+                        <address id="info-email"><a class="email" href="mailto:bookworm.as@gmail.com">bookworm.as@gmail.com</a></address>
+                    </div>
+                    <div id="info-center">
+                        <div id="info-address">6610 Kristin LN NW<br>Rochester, MN 55901</div>
+                        <div id="info-home">H: <a class="email" href="tel:+15072528737">(507) 252-8737</a></div>
+                    </div>
+                    <div id="info-right">
+                        <div id="info-accounts">
+                            <a class="link" href="http://ubuntuforums.org/member.php?u=1066963" target="_blank">Ubuntu Forums</a><br>
+                            <a class="link" href="https://github.com/cipherboy" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+            </article>
+            <article id="main-overview" class="main-article">
+                <header id="overview-header" class="main-header">
+                    <h3 id="overview-title">[Overview]</h3>
+                </header>
+                <article id="overview-content" class="main-article">
+                    <p>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>Web developer for clients via Wordpress theming and PHP design. <br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>Work experience at the Rochester Clinic and MLTGroup. <br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>System administration on Linux, Mac OS X and Windows nodes. <br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>Dedicated violinist with 11 years of chamber, orchestral, and solo music.<br>
+                    </p>
+                </article>
+                <footer id="overview-footer" class="main-footer">
+                    ~~~
+                </footer>
+            </article>
+            <article id="main-tech" class="main-article">
+                <header id="tech-header" class="main-header">
+                    <h3 id="tech-title">[Technologies]</h3>
+                </header>
+                <section id="tech-content" class="main-section">
+                    <p>
+                        <b>Programming Languages: </b><br>
+                            <span class="indent">HTML5, CSS3, JavaScript, PHP, Python, Perl, C++, Bash, XML, SQL, Java</span><br>
+                        <b>Operating Systems: </b><br>
+                            <span class="indent">Linux [Ubuntu, Gentoo, Fedora], Mac OS X, Windows (XP - 8.1)</span><br><br>
+                        <b>Desktop Environments: </b>Cinnamon, Fluxbox, GNOME Shell/Unity, KDE<br>
+                        <b>Project Management: </b>Git, <a class="link" href="http://github.com/cipherboy/" title="Go to Alexander Scheel's GitHub profile" target="_blank">GitHub</a>, Make<br>
+                        <b>Editors: </b>Gedit, Vi, Emacs, Nano, Eclipse<br>
+                        <b>Servers: </b>Apache, MySQL Server, SSH, Nginx, NodeJS, FTP, SMB<br>
+                        <b>Database: </b>MySQL, SQLite<br>
+                    </p>
+                </section>
+                <footer id="tech-footer" class="main-footer">
+                    ~~~
+                </footer>
+            </article>
+            <article id="main-work" class="main-article">
+                <header id="work-header" class="main-header">
+                    <h3 id="work-title">[Work Experience]</h3>
+                </header>
+                <section id="work-content" class="main-section">
+                    <h4 class="work-subtitle"><a class="link" href="http://www.rochesterclinic.com/" title="Go to RochesterClinic.com" target="_blank">Rochester Clinic</a><span class="subtitle-dates">2014</span></h4>
+                    <p class="work-text">
+                        <b>Rochester Clinic</b> is a family owned clinic based in Rochester, Minnesota. Duties included application troubleshooting, installation of new systems, and virus removal on a mixture of Windows platforms (Windows Vista - 8.1 Professional, Server 2008). Accomplishments:<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Tech support: </b>providing technical support of Windows Professional and Server editions in a production environment.<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Part-time work: </b>working on a mixed schedule to enable minimal downtime.<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Wordpress Migration: </b>converting an existing DreamWeaver-based site design to WordPress.<br>
+                    </p>
+                    <br>
+                    <h4 class="work-subtitle"><a class="link" href="http://www.mltgroup.com/" title="Go to MLTGroup.com" target="_blank">MLTGroup</a><span class="subtitle-dates">2013</span></h4>
+                    <p class="work-text">
+                        <b>MLT Group</b> is a is a website and advertising design company based in Rochester, Minnesota. Duties included maintaining the in-house CMS and building out new websites for customers. Accomplishments:<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Team members: </b>learning to interact with others in a professional setting.<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Time management: </b>arriving at work prompt and completing work by a deadline.<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Application continuation: </b>enhancing and keeping in-house CMS systems up and running.<br>
+                    </p>
+                </section>
+                <footer id="work-footer" class="main-footer">
+                    ~~~
+                </footer>
+            </article>
+            <article id="main-products" class="main-article">
+                <header id="products-header" class="main-header">
+                    <h3 id="products-title">[Products]</h3>
+                </header>
+                <section id="products-content" class="main-section">
+                    <h4 class="products-subtitle"><a class="link" href="http://tourneypicks.org" title="Go to Tourneypicks.org" target="_blank">Tourneypicks.org</a><span class="subtitle-dates">2011-present</span></h4>
+                    <p class="products-text">
+                        <b>Tourneypicks</b>is a custom web interface tracking NCAA tournament picks. This software tracks and automatically scores the rounds, greatly simplifying management of the pool for the client. Users can easily see their standings in the pool as compared to the other users and compare their choices to the results. Accomplishments:<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Client relationships: </b>learning the nuances of navigating the client/developer relationship.<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Time management: </b>delivering a complete product on a fixed deadline.<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Customer support: </b>supporting the client's customers across a variety of devices and platforms.<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Wordpress: </b>embedded Wordpress with a minimal theme to match rest of site.<br>
+                    </p>
+                    <br>
+                    <!--
+                    N.B.: SEMYO has updated their website to a different theme.
+                    <h4 class="products-subtitle"><a class="link" href="http://semyo.org" title="Go to SEMYO.org" target="_blank">SEMYO.org</a><span class="subtitle-dates">2012-2013</span></h4>
+                    <p class="products-text">
+                        <b>SEMYO.org</b> is an updated website theme built on Wordpress for a nonprofit. Accomplishments:<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Wordpress theming: </b>developing a theme to interface to the Wordpress CMS system.<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Designing to vision: </b>developing a website to match the customer's vision.<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Administration/transfer: </b>maintaining the site and transferring control to the client, empowering them to update it.<br>
+                    </p>
+                    <br>
+                    -->
+                    <h4 class="products-subtitle"><a class="link" href="http://www.vacava.com/invitational/" title="Go to Vacava Invitational information page" target="_blank">Vacava's Invitational</a><span class="subtitle-dates">2012</span></h4>
+                    <p class="products-text">
+                        <b>Vacava</b> provides a cloud environment for rapid business application development. Placed second in non-developers category with a website targeted towards tracking project milestones. Accomplishments:<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Competitions: </b>preparing an application/code for use in a competition.<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Business: </b>viewing in their eyes and the different needs.<br>
+                    </p>
+                </section>
+                <footer id="products-footer" class="main-footer">
+                    ~~~
+                </footer>
+            </article>
+            <article id="main-projects" class="main-article">
+                <header id="projects-header" class="main-header">
+                    <h3 id="projects-title">[Projects]</h3>
+                </header>
+                <section id="projects-content" class="main-section">
+                    <h4 class="projects-subtitle">JavaScript Libraries:</h4>
+                    <p class="projects-text">
+                        Various libraries centered around new HTML5 features in a dynamic (PHP) environment.<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas><b><a class="link" href="https://github.com/cipherboy/jCanvas">jCanvas</a></b> is a single function used to draw HTML5 Canvas saving space via outsourcing function calls (<code>jCanvasDraw(canvas, ctx, "commands")</code> versus <code class="code">ctx.beginPath()...ctx.endPath()</code>, etc).<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas><b><a class="link" href="https://github.com/cipherboy/jCarousel">jPage</a></b> is a dynamic page state library that supports complex GET/POST requests and interaction with external data.<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas><b><a class="link" href="https://github.com/cipherboy/jTable">jTable</a></b> is a feature filled dynamic table library featuring sorting and searching with rich display capability based on jCanvas and events via jQuery.<br>
+                    </p>
+                    <br>
+                    <h4 class="projects-subtitle">Cryptographic Suite:</h4>
+                    <p class="projects-text">
+                        A partial cryptographic suite built in Python/nCurses centering around ciphers and eventually cryptanalysis.<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>Python class support<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>nCurses development<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>String manipulation.<br>
+                    </p>
+                </section>
+                <footer id="projects-footer" class="main-footer">
+                    ~~~
+                </footer>
+            </article>
+            <article id="main-education" class="main-article">
+                <header id="education-header" class="main-header">
+                    <h3 id="education-title">[Education]</h3>
+                </header>
+                <section id="education-content" class="main-section">
+                    <b>Schooling: </b><br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>Homeschooled part time<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>Century High School<br>
+                    <br>
+                    <b>Grade: </b>12th Grade<br>
+                    <b>AP Tests: </b><br>
+                    <span class="indent">Literature and Composition (4), Macroeconomics (4), Calculus (5), Computer Science (5), Human Geography (5), Language and Composition (5), United States History (5)</span><br><br>
+                    <br>
+                    <h4 class="education-subtitle">Letters:</h4>
+                    <p class="education-text">
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>Model United Nations - 2013, 2014<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>Orchestra - 2014<br>
+                    </p>
+                    <br>
+                    <h4 class="education-subtitle">Tech Camps:</h4>
+                    <p class="education-text">
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>Iowa State: Explorations Introduction to Hacking Camp - 2012<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>iD Tech Camp: iPhone App Development - 2011<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>Winona State Robotics Camp - 2010<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>U of MN Rochester: Introduction to C++ Camp - 2008<br>
+                    </p>
+                </section>
+                <footer id="education-footer" class="main-footer">
+                    ~~~
+                </footer>
+            </article>
+            <article id="main-f" class="main-article">
+                <header id="music-header" class="main-header">
+                    <h3 id="music-title">[Music]</h3>
+                </header>
+                <section id="music-content" class="main-section">
+                    <h4>Violin (Private Lessons): </h4>
+                    <p class="music-text">
+                        <span class="indent">11 years</span><br>
+                    </p>
+                    <h4>Minnesota Youth Symphonies: </h4>
+                    <p class="music-text">
+                        <span class="indent">3 years</span><br>
+                    </p>
+                    <h4>Artaria Chamber Music School: </h4>
+                    <p class="music-text">
+                        <span class="indent">1 year</span><br>
+                    </p>
+                    <h4>Southeastern Minnesota Youth Orchestra: </h4>
+                    <p class="music-text">
+                        <span class="indent">3 years</span><br>
+                    </p>
+                    <br>
+                    <h4>Solo Repertoire:</h4>
+                    <p class="music-text">
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>A. Khachaturian - Violin Concerto in D Minor, I: Allegro con fermezza<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>M. Bruch - Violin Concerto No. 1 in G Minor, I: Vorspiel<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>J.S. Bach - Unaccompanied Sonatas and Partitas (select movements)<br>
+                    </p>
+                    <br>
+                    <h4>Chamber Repertoire:</h4>
+                    <p class="music-text">
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>F. Schubert - String Quartet No. 14 in D Minor, &quot;Der Tod und das Mädchen&quot;, I: Allegro, II: Andante con moto<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>J. Brahms: Piano Trio No. 2 in C Major, (all Movements)<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>A. Glazunov: String Quintet No. 39 in A Major, IV: Finale: Allegro moderato - Allegro vivo<br>
+                    </p>
+                    <br>
+                    <h4 class="music-subtitle">Music Camps:</h4>
+                    <p class="music-text">
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>
+                        <a class="link" href="http://www.stringwood.com/" title="Go to Stringwood.com" target="_blank">Stringwood</a> - 2013, 2014<br>
+                        
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>
+                        <a class="link" href="http://www.weber.edu/foulgerfestival" title="Go to weber.edu/foulgerfestival" target="_blank">Sid and Mary Foulger Internationl Music Festival</a> - 2014<br>
+                        
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>
+                        <a class="link" href="http://www.mnsota.org/events/upper-midwest-camp" title="Go to mnsota.org/events/upper-midwest-camp" target="_blank">Upper Midwest String and Chamber Music Conference</a> - 2011, 2012<br>
+                    </p>
+                    <br>
+                    <h4 class="music-subtitle"><a class="link" href="http://rochestermusicguild.org/" title="Go to RochesterMusicGuild.org" target="_blank">Rochester Music Guild</a> Competitions:</h4>
+                    <p class="music-text">
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>Senior Division, 3rd place - 2013, 2014<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>Junior Division, 1st place - 2012<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>Junior Division, 3rd place - 2011<br>
+                    </p>
+                </section>
+                <footer id="music-footer" class="main-footer">
+                    ~~~
+                </footer>
+            </article>
+            <article id="main-other" class="main-article">
+                <header id="other-header" class="main-header">
+                    <h3 id="other-title">[Other Activities]</h3>
+                </header>
+                <section id="other-content" class="main-section">
+                    <b>Tennis/Table Tennis: </b>5 years<br>
+                    <b>Salvation Army Kettle Ringing (with instruments): </b>4 years<br>
+                    <b>Model United Nations (Minneapolis convention): </b>3 years<br>
+                    <b>Ubuntu Forums: </b>Over <a class="link" href="http://ubuntuforums.org/member.php?u=1066963" target="_blank">600</a> posts.<br>
+                    <b>Boy Scouts: </b>Life Scout; scouting since Cub Scouts<br>
+                    <b>National Honors Society: </b>1 year<br>
+                </section>
+            </article>
+            <h2 class="center">References available upon request</h2>
+        </div>
+        <footer id="page-footer">
+            <div id="footer-left">
+                Created using <a class="link" href="https://projects.gnome.org/gedit/" target="_blank">Gedit</a><br>
+            </div>
+            <div id="footer-center">
+                Copyright (C) 2014 Alexander&nbsp;Scheel<br>
+                All rights reserved.
+            </div>
+            <div id="footer-right">
+                Valid HTML5, CSS3.
+                <a id="footer-validator" href="http://validator.w3.org/"><img alt="HTML5 Logo" src="http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" width="30" height="30"></a>
+            </div>
+        </footer>
+        <script type="text/javascript">
+            var bullets = document.getElementsByTagName('canvas');
+            for (var bid in bullets) {
+                var canvas = bullets[bid];
+                var ctx = canvas.getContext('2d');
+                jCanvasDraw(canvas, ctx, "b,a:7:7:3:0:" + 2*Math.PI + ",fs:#AAAAAA,f,c");
+                jCanvasDraw(canvas, ctx, "b,a:5:5:3:0:" + 2*Math.PI + ",fs:#3366AA,f,c");
+            };
+        </script>
+    </body>
+</html>
