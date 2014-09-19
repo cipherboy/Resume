@@ -178,9 +178,6 @@
                 padding: 5px;
             }
             
-            header.main-header {
-            }
-            
             section.main-section {
                 margin-left: 20px;
             }
@@ -282,6 +279,18 @@
                 margin-left: 3em;
                 
                 display: inline-block;
+            }
+
+            @media print {
+                /* Fix printing */
+                .pagebreak {
+                    page-break-before: always;
+                }
+                
+                body,html {
+                    background-color: #ffffff;
+                }
+                
             }
         </style>
     </head>
@@ -395,7 +404,7 @@
                     </p>
                     <br>
                     -->
-                    <h4 class="products-subtitle"><a class="link" href="http://www.vacava.com/invitational/" title="Go to Vacava Invitational information page" target="_blank">Vacava's Invitational</a><span class="subtitle-dates">2012</span></h4>
+                    <h4 class="products-subtitle pagebreak"><a class="link" href="http://www.vacava.com/invitational/" title="Go to Vacava Invitational information page" target="_blank">Vacava's Invitational</a><span class="subtitle-dates">2012</span></h4>
                     <p class="products-text">
                         <b>Vacava</b> provides a cloud environment for rapid business application development. Placed second in non-developers category with a website targeted towards tracking project milestones. Accomplishments:<br>
                         <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Competitions: </b>preparing an application/code for use in a competition.<br>
@@ -484,7 +493,7 @@
                         <span class="indent">3 years</span><br>
                     </p>
                     <br>
-                    <h4>Solo Repertoire:</h4>
+                    <h4 class="pagebreak">Solo Repertoire:</h4>
                     <p class="music-text">
                         <canvas class="bullet" width="10" height="10">&bull;</canvas>A. Khachaturian - Violin Concerto in D Minor, I: Allegro con fermezza<br>
                         <canvas class="bullet" width="10" height="10">&bull;</canvas>M. Bruch - Violin Concerto No. 1 in G Minor, I: Vorspiel<br>
@@ -527,11 +536,12 @@
                 </header>
                 <section id="other-content" class="main-section">
                     <b>Tennis/Table Tennis: </b>5 years<br>
+                    <b>Church (acolyte, crucifer): </b>5 years<br>
                     <b>Salvation Army Kettle Ringing (with instruments): </b>4 years<br>
                     <b>Model United Nations (Minneapolis convention): </b>3 years<br>
                     <b>Ubuntu Forums: </b>Over <a class="link" href="http://ubuntuforums.org/member.php?u=1066963" target="_blank">600</a> posts.<br>
                     <b>Boy Scouts: </b>Life Scout; scouting since Cub Scouts<br>
-                    <b>National Honors Society: </b>1 year<br>
+                    <b>National Honors Society: </b>2 years<br>
                 </section>
             </article>
             <h2 class="center">References available upon request</h2>
