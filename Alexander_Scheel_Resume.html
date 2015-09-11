@@ -287,6 +287,24 @@
                     background-color: #ffffff;
                 }
 
+                div#header-tab {
+                    border-top-right-radius: 5px;
+                    border-top-left-radius: 5px;
+                    border-top: 1px dashed #3366AA;
+                    border-left: 1px dashed #3366AA;
+                    border-right: 1px dashed #3366AA;
+                    
+                    box-shadow: 0px 0px 0px #AAAAAA;
+                }
+                
+                div#header-tab h1 {
+                    position: relative;
+                    top: -15px;
+                }
+                
+                div#page-main {
+                    box-shadow: 0px 0px 0px #AAAAAA;
+                }
             }
         </style>
     </head>
@@ -304,12 +322,13 @@
                     </div>
                     <div id="info-center">
                         <address id="info-address">6610 Kristin LN NW<br>Rochester, MN 55901</address>
-                        <div id="info-home">H: <a class="clean" href="tel:+15072528737">(507) 252-8737</a></div>
+                        <div id="info-home">C: <a class="clean" href="tel:+15072528737">(507) 206-8310</a></div>
                     </div>
                     <div id="info-right">
                         <div id="info-accounts">
                             <a href="http://ubuntuforums.org/member.php?u=1066963" target="_blank">Ubuntu Forums</a><br>
-                            <a href="https://github.com/cipherboy" target="_blank">GitHub</a>
+                            <a href="https://github.com/cipherboy" target="_blank">GitHub</a><br>
+                            <a href="https://www.linkedin.com/pub/alexander-scheel/105/514/807" target="_blank">LinkedIn</a>
                         </div>
                     </div>
                 </article>
@@ -324,13 +343,11 @@
                         <canvas class="bullet" width="10" height="10">&bull;</canvas>Thinker, <a href="http://www.catb.org/jargon/html/H/hacker.html" title="Go to ESR's definition of a hacker" target="_blank">hacker</a>, and cryptographer.<br>
                         <canvas class="bullet" width="10" height="10">&bull;</canvas>Work experience at the Rochester Clinic and MLTGroup.<br>
                         <canvas class="bullet" width="10" height="10">&bull;</canvas>System administration on Linux, Mac OS X, and Windows nodes.<br>
-                        <canvas class="bullet" width="10" height="10">&bull;</canvas>Dedicated violinist with 11 years of chamber, orchestral, and solo music.<br>
+                        <!--<canvas class="bullet" width="10" height="10">&bull;</canvas>Dedicated violinist with 11 years of chamber, orchestral, and solo music.<br>-->
                         <canvas class="bullet" width="10" height="10">&bull;</canvas>Supporter of the Oxford Comma.<br>
                     </p>
                 </article>
-                <footer id="overview-footer" class="main-footer">
-                    ~~~
-                </footer>
+                <footer id="overview-footer" class="main-footer">~~~</footer>
             </article>
             <article id="main-tech" class="main-article">
                 <header id="tech-header" class="main-header">
@@ -339,28 +356,26 @@
                 <section id="tech-content" class="main-section">
                     <p>
                         <b>Programming Languages: </b><br>
-                            <span class="indent">Go, Ruby, <!-- CoffeeScript # Removed temporarily until a project in CS has been completed --> HTML5, CSS3, JavaScript, PHP, MySQL, XML, JSON, Python, Perl, C++, Bash, Java</span><br>
+                            <span class="indent">Go, Ruby, <!-- CoffeeScript <== Dream language  ||  Old languages ==>  --> XML/HTML5, CSS3, JavaScript, PHP, <!--MySQL, XML, JSON,--> Python, <!--Perl, C++, Bash, -->Java</span><br>
                         <b>Operating Systems: </b><br>
-                            <span class="indent">Linux [Ubuntu, Mint, Gentoo, Fedora], Mac OS X, Windows (XP - 8.1)</span><br>
+                            <span class="indent">Linux [Ubuntu, Mint, Gentoo, Fedora], Mac OS X, Windows (XP - 10)</span><br>
                         <b>Desktop Environments: </b>Cinnamon, Screen, Fluxbox, GNOME Shell, Unity, KDE<br>
                         <b>Project Management: </b>Git, <a href="http://github.com/cipherboy/" title="Go to Alexander Scheel's GitHub profile" target="_blank">GitHub</a>, Make<br>
                         <b>Editors: </b>Brackets, Gedit, Vi, Emacs, Nano, Eclipse<br>
                         <b>Servers: </b>Apache, MySQL, MariaDB, MSSQL, SSH, Nginx, Node.js, FTP, SMB
                     </p>
                 </section>
-                <footer id="tech-footer" class="main-footer">
-                    ~
-                </footer>
+                <footer id="tech-footer" class="main-footer">~</footer>
             </article>
             <article id="main-work" class="main-article">
                 <header id="work-header" class="main-header">
                     <h3 id="work-title">[Work Experience]</h3>
                 </header>
                 <section id="work-content" class="main-section">
-                    <h4 class="work-subtitle"><a href="http://www.rochesterclinic.com/" title="Go to RochesterClinic.com" target="_blank">Rochester Clinic</a><span class="subtitle-dates">2014-present</span></h4>
+                    <h4 class="work-subtitle"><a href="http://www.rochesterclinic.com/" title="Go to RochesterClinic.com" target="_blank">Rochester Clinic</a><span class="subtitle-dates">2014-2015</span></h4>
                     <p class="work-text">
                         <b>Rochester Clinic</b> is a family owned clinic based in Rochester, Minnesota. Duties included application troubleshooting, installation of new systems, and virus removal on a mixture of Windows platforms (Windows Vista - 8.1 Professional, Server 2008). Accomplishments:<br>
-                        <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Patient Data Migration (2015): </b>migration of 12k patients between two EMRs using Ruby. Outputs from a raw database to demographics .CSV, patient information to the <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=258" title="Go to HL7's description of C-CDA" target="_blank">C-CDA</a> standard, progress notes from XML objects to PDFs, modifies filesystem structure of attached documents to organize by chart number. Learning project for Ruby.<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Patient Data Migration (2015): </b>migration of 12k patients between two EMRs using Ruby. Skills: Database manipulation, CSV, implemented <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=258" title="Go to HL7's description of C-CDA" target="_blank">C-CDA</a> standard, XML-to-PDFs.<br>
                         <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Tech support: </b>providing technical support of Windows Professional and Server editions in a production environment.<br>
                         <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Part-time work: </b>working on a mixed schedule to enable minimal downtime.<br>
                         <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Wordpress Migration: </b>converting an existing DreamWeaver-based site design to WordPress.<br>
@@ -374,26 +389,24 @@
                         <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Application continuation: </b>enhancing and keeping in-house CMS systems up and running.<br>
                     </p>
                 </section>
-                <footer id="work-footer" class="main-footer">
-                    ~~~~
-                </footer>
+                <footer id="work-footer" class="main-footer">~~~~</footer>
             </article>
-            <article id="main-products" class="main-article pagebreak">
+            <article id="main-products" class="main-article">
                 <header id="products-header" class="main-header">
                     <h3 id="products-title">[Products]</h3>
                 </header>
                 <section id="products-content" class="main-section">
                     <h4 class="products-subtitle"><a href="http://tourneypicks.org" title="Go to Tourneypicks.org" target="_blank">Tourneypicks.org</a><span class="subtitle-dates">2011-present</span></h4>
                     <p class="products-text">
-                        <b>Tourneypicks</b> is a custom web interface tracking NCAA tournament picks. This software tracks and automatically scores the rounds, greatly simplifying management of the pool for the client. Users can easily see their standings in the pool as compared to the other users and compare their choices to the results. Accomplishments:<br>
+                        <b>Tourneypicks</b> is a custom web interface tracking NCAA tournament picks. This software tracks and automatically scores the rounds, greatly simplifying management of the pool for the client. Users can easily see their standings in the pool as compared to the other users and compare their choices to the results. Accomplishments:<br class="pagebreak">
                         <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Complete redesign (2015): </b>from-scratch redesign involved improving old code and establishing new goals for the software.<br>
                         <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Client relationships: </b>learning the nuances of navigating the client/developer relationship.<br>
                         <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Time management: </b>delivering a complete product on a fixed deadline.<br>
                         <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Customer support: </b>supporting the client's customers across a variety of devices and platforms.<br>
                         <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Wordpress: </b>embedded Wordpress with a minimal theme to match rest of site.<br>
                     </p>
-                    <br>
                     <!--
+                    <br>
                     N.B.: SEMYO has updated their website to a different theme.
                     <h4 class="products-subtitle"><a href="http://semyo.org" title="Go to SEMYO.org" target="_blank">SEMYO.org</a><span class="subtitle-dates">2012-2013</span></h4>
                     <p class="products-text">
@@ -403,27 +416,36 @@
                         <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Administration/transfer: </b>maintaining the site and transferring control to the client, empowering them to update it.<br>
                     </p>
                     <br>
-                    -->
+                    N.B.: Removing older material.
                     <h4 class="products-subtitle"><a href="http://www.vacava.com/invitational/" title="Go to Vacava Invitational information page" target="_blank">Vacava's Invitational</a><span class="subtitle-dates">2012</span></h4>
                     <p class="products-text">
                         <b>Vacava</b> provides a cloud environment for rapid business application development. Placed second in non-developers category with a website targeted towards tracking project milestones. Accomplishments:<br>
                         <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Competitions: </b>preparing an application/code for use in a competition.<br>
                         <canvas class="bullet" width="10" height="10">&bull;</canvas><b>Business: </b>viewing in their eyes and the different needs.<br>
                     </p>
+                    -->
                 </section>
-                <footer id="products-footer" class="main-footer">
-                    ~
-                </footer>
+                <footer id="products-footer" class="main-footer">~</footer>
             </article>
             <article id="main-projects" class="main-article">
                 <header id="projects-header" class="main-header">
                     <h3 id="projects-title">[Projects]</h3>
                 </header>
                 <section id="projects-content" class="main-section">
+                    <h4 class="projects-subtitle">vCAT:</h4>
+                    <p class="projects-text">
+                        Cryptanalysis of Vigenere ciphers using <a href="http://arxiv.org/pdf/1505.04714v1.pdf" title="View this paper on ArXiv" target="_blank">Turing's</a> "The Applications of Probability to Cryptography".<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>Data-centric reactive interface<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>Implementing older algorithms<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>Cracking <a href="http://cipherboy.github.io/ap-gov/#/5" title="High School AP Government presentation with Turing's algorithm applied to Kryptos" target="_blank">Kryptos</a><br>
+                    </p>
+                    <!--
+                    <br>
                     <h4 class="projects-subtitle">Snakey:</h4>
                     <p class="projects-text">
                         A fun recreation of Google's Old Snakey, hosted on <a href="https://cipherboy.github.io/Snakey" title="Go to Snakey" target="_blank">GitHub</a>.<br>
                     </p>
+                    N.B.: Transitioning out older projects.
                     <br>
                     <h4 class="projects-subtitle">JavaScript Libraries:</h4>
                     <p class="projects-text">
@@ -440,32 +462,37 @@
                         <canvas class="bullet" width="10" height="10">&bull;</canvas>nCurses development<br>
                         <canvas class="bullet" width="10" height="10">&bull;</canvas>String manipulation<br>
                     </p>
+                    -->
                 </section>
-                <footer id="projects-footer" class="main-footer">
-                    ~~~~~
-                </footer>
+                <footer id="projects-footer" class="main-footer">~~~~~</footer>
             </article>
-            <article id="main-education" class="main-article pagebreak">
+            <article id="main-education" class="main-article">
                 <header id="education-header" class="main-header">
                     <h3 id="education-title">[Education]</h3>
                 </header>
                 <section id="education-content" class="main-section">
-                    <b>Schooling: </b><br>
-                        <canvas class="bullet" width="10" height="10">&bull;</canvas>Iowa State University (future)<br>
-                        <canvas class="bullet" width="10" height="10">&bull;</canvas>Homeschooled (4th - Present) [part time]<br>
-                        <canvas class="bullet" width="10" height="10">&bull;</canvas>Century High School (9th - Present) [part time]<br>
-                    <br>
-                    <b>Grade: </b>12th Grade<br>
-                    <b>AP Tests: </b><br>
-                    <span class="indent">AP Physics 1 (2015), AP Physics 2 (2015), AP Physics C: Mechanics (2015), Literature and Composition (4), Macroeconomics (4), Calculus (5), Computer Science (5), Human Geography (5), Language and Composition (5), United States History (5)</span><br><br>
-                    <br>
-                    <h4 class="education-subtitle">Letters:</h4>
+                    <h4 class="education-subtitle">Iowa State University (2015 - present)</h4>
                     <p class="education-text">
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>Majors: Computer Science and Mathematics<br>
+                        <canvas class="bullet" width="10" height="10">&bull;</canvas>Grade: Freshman<br>
+                    </p>
+                    <br>
+                    <h4 class="education-subtitle">Secondary School (2010 - 2015)</h4>
+                    <p class="education-text">
+                        Homeschooled: 4th - 12th Grades<br>
+                        Century High School: 9th - 12th Grades<br>
+                        ACT: 35<br>
+                        <!--
+                        N.B.: Transitioning out highschool education. 
+                        <b>AP Tests: </b><br>
+                        <span class="indent">AP Physics 2 (3), AP Physics 1 (4), AP Physics C: Mechanics (4), Literature and Composition (4), Macroeconomics (4), Calculus (5), Computer Science (5), Human Geography (5), Language and Composition (5), United States History (5)</span><br>
+                        -->
+                        <b class="education-subtitle">Letters:</b><br>
                         <canvas class="bullet" width="10" height="10">&bull;</canvas>Model United Nations - 2013, 2014<br>
                         <canvas class="bullet" width="10" height="10">&bull;</canvas>Orchestra - 2014<br>
                         <canvas class="bullet" width="10" height="10">&bull;</canvas>STEM - 2014<br>
+                        <br>
                     </p>
-                    <br>
                     <h4 class="education-subtitle">Tech Camps:</h4>
                     <p class="education-text">
                         <canvas class="bullet" width="10" height="10">&bull;</canvas>Iowa State: Explorations Introduction to Hacking Camp - 2012<br>
@@ -474,74 +501,11 @@
                         <canvas class="bullet" width="10" height="10">&bull;</canvas>U of MN Rochester: Introduction to C++ Camp - 2008<br>
                     </p>
                 </section>
-                <footer id="education-footer" class="main-footer">
-                    ~~~~~~~~~
-                </footer>
+                <footer id="education-footer" class="main-footer">~~~~~~~~~<!-- π = 3.14159265358979323846264338327950288419716939937510... --></footer>
             </article>
-            <article id="main-f" class="main-article">
-                <header id="music-header" class="main-header">
-                    <h3 id="music-title">[Music]</h3>
-                </header>
-                <section id="music-content" class="main-section">
-                    <h4 class="music-subtitle">Violin (Private Lessons): </h4>
-                    <p class="music-text">
-                        <span class="indent">11 years</span><br>
-                    </p>
-                    <h4 class="music-subtitle">Minnesota Youth Symphonies: </h4>
-                    <p class="music-text">
-                        <span class="indent">3 years</span><br>
-                    </p>
-                    <h4 class="music-subtitle">Artaria Chamber Music School: </h4>
-                    <p class="music-text">
-                        <span class="indent">1 year</span><br>
-                    </p>
-                    <h4 class="music-subtitle">Southeastern Minnesota Youth Orchestra: </h4>
-                    <p class="music-text">
-                        <span class="indent">3 years</span><br>
-                    </p>
-                    <br>
-                    <h4 class="music-subtitle">Solo Repertoire:</h4>
-                    <p class="music-text">
-                        <canvas class="bullet" width="10" height="10">&bull;</canvas>H. Wieniawski - Violin Concerto No. 2, Op. 22, I: Allegro moderato<br>
-                        <canvas class="bullet" width="10" height="10">&bull;</canvas>P. Tchaikovsky - Violin Concerto in D Major, Op. 35, III: Finale: Allegro vivacissimo<br>
-                        <canvas class="bullet" width="10" height="10">&bull;</canvas>A. Khachaturian - Violin Concerto in D Minor, I: Allegro con fermezza<br>
-                        <canvas class="bullet" width="10" height="10">&bull;</canvas>M. Bruch - Violin Concerto No. 1 in G Minor, I: Vorspiel<br>
-                        <canvas class="bullet" width="10" height="10">&bull;</canvas>J.S. Bach - Unaccompanied Sonatas and Partitas (select movements)<br>
-                    </p>
-                    <br>
-                    <h4 class="music-subtitle">Chamber Repertoire:</h4>
-                    <p class="music-text">
-                        <canvas class="bullet" width="10" height="10">&bull;</canvas>E. Schulhoff - Five Pieces for String Quartet, I: Viennese Waltz, III: Czech folk music, V: Tarantella<br>
-                        <canvas class="bullet" width="10" height="10">&bull;</canvas>F. Mendelssohn - String Quartet No. 2, Op. 44, I: Allegro assai appasionato<br>
-                        <canvas class="bullet" width="10" height="10">&bull;</canvas>J. Haydn - String Quartet No. 5 in F minor, Op. 20, I: Allegro moderato<br>
-                        <canvas class="bullet" width="10" height="10">&bull;</canvas>F. Schubert - String Quartet No. 14 in D Minor, &quot;Der Tod und das Mädchen&quot;, I: Allegro, II: Andante con moto<br>
-                        <canvas class="bullet" width="10" height="10">&bull;</canvas>J. Brahms: Piano Trio No. 2 in C Major, (all movements)<br>
-                        <canvas class="bullet" width="10" height="10">&bull;</canvas>A. Glazunov: String Quintet No. 39 in A Major, IV: Finale: Allegro moderato - Allegro vivo<br>
-                    </p>
-                    <br>
-                    <h4 class="music-subtitle">Music Camps:</h4>
-                    <p class="music-text">
-                        <canvas class="bullet" width="10" height="10">&bull;</canvas>
-                        <a href="http://www.stringwood.com/" title="Go to Stringwood.com" target="_blank">Stringwood</a> - 2013, 2014<br>
-
-                        <canvas class="bullet" width="10" height="10">&bull;</canvas>
-                        <a href="http://www.weber.edu/foulgerfestival" title="Go to weber.edu/foulgerfestival" target="_blank">Sid and Mary Foulger Internationl Music Festival</a> - 2014<br>
-
-                        <canvas class="bullet" width="10" height="10">&bull;</canvas>
-                        <a href="http://www.mnsota.org/events/upper-midwest-camp" title="Go to mnsota.org/events/upper-midwest-camp" target="_blank">Upper Midwest String and Chamber Music Conference</a> - 2011, 2012<br>
-                    </p>
-                    <br>
-                    <h4 class="music-subtitle"><a href="http://rochestermusicguild.org/" title="Go to RochesterMusicGuild.org" target="_blank">Rochester Music Guild</a> Competitions:</h4>
-                    <p class="music-text">
-                        <canvas class="bullet" width="10" height="10">&bull;</canvas>Senior Division, 3rd place - 2013, 2014<br>
-                        <canvas class="bullet" width="10" height="10">&bull;</canvas>Junior Division, 1st place - 2012<br>
-                        <canvas class="bullet" width="10" height="10">&bull;</canvas>Junior Division, 3rd place - 2011<br>
-                    </p>
-                </section>
-                <footer id="music-footer" class="main-footer">
-                    ~~ <!-- π = 3.14159265358979323846264338327950288419716939937510... -->
-                </footer>
-            </article>
+            <!--
+            N.B.: Music now found in separate resume. 
+            -->
             <article id="main-other" class="main-article">
                 <header id="other-header" class="main-header">
                     <h3 id="other-title">[Other Activities]</h3>
@@ -561,17 +525,17 @@
         <footer id="page-footer">
             <div id="footer-left">
                 Created using <a href="https://projects.gnome.org/gedit/" target="_blank">Gedit</a><br>
-                and <a href="http://brackets.io/" target="_blank">Brackets.</a>
+                and <a href="http://brackets.io/" target="_blank">Brackets</a>
             </div>
             <div id="footer-center">
                 Copyright (C) 2015<br>
                 Alexander&nbsp;Scheel<br>
                 All rights reserved.<br>
-                <a href="http://www.marksimonson.com/fonts/view/anonymous-pro">Anonymous Pro</a>
             </div>
             <div id="footer-right">
                 Valid HTML5, CSS3.
-                <a class="clean" id="footer-validator" href="http://validator.w3.org/check?uri=referer"><img alt="HTML5 Logo" src="http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" width="30" height="30"></a>
+                <a class="clean" id="footer-validator" href="http://validator.w3.org/check?uri=referer"><img alt="HTML5 Logo" src="http://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" width="30" height="30"></a><br>
+                <a href="http://www.marksimonson.com/fonts/view/anonymous-pro">Anonymous Pro</a>
             </div>
         </footer>
         <script type="text/javascript">
