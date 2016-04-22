@@ -1,0 +1,40 @@
+@media print {
+    /* Fix printing */
+    .pagebreak {
+        page-break-before: always;
+    }
+
+    .pagebreak:before {
+        content: "\000A\000A";
+        white-space: pre;
+    }
+
+    body,html {
+        background-color: #ffffff;
+    }
+
+    div#header-tab {
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        border-top: 1px dashed #3366AA;
+        border-left: 1px dashed #3366AA;
+        border-right: 1px dashed #3366AA;
+
+        box-shadow: 0px 0px 0px #AAAAAA;
+        color: #3366AA;
+    }
+
+    div#header-tab h1 {
+        position: relative;
+        top: -15px;
+        color: #FFFFFF;
+    }
+
+    div#page-main {
+        box-shadow: 0px 0px 0px #AAAAAA;
+    }
+
+    .print-text-black {
+        color: #112 !important;
+    }
+}
