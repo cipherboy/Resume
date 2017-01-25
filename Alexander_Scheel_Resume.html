@@ -43,7 +43,33 @@
             **/
 
             // For drawing pretty bullets
-            function jCanvasDraw(canvas,ctx,frame){var commands=frame.split(',');for(var i=0;i<commands.length;i++){var temp=commands[i].split(':');var command=temp[0];var arguments=new Array();for(var j=1;j<temp.length;j++){arguments[j-1]=temp[j]}if(command=='a'){if(arguments[5]==''){ctx.arc(arguments[0],arguments[1],arguments[2],arguments[3],arguments[4])}else{ctx.arc(arguments[0],arguments[1],arguments[2],arguments[3],arguments[4],arguments[5])}}else if(command=='at'){ctx.arcTo(arguments[0],arguments[1],arguments[2],arguments[3],arguments[4])}else if(command=='b'){ctx.beginPath()}else if(command=='c'){ctx.closePath()}else if(command=='cs'){ctx.clearRect(0,0,canvas.width,canvas.height)}else if(command=='cw'){ctx.canvas.width=ctx.canvas.width}else if(command=='f'){ctx.fill()}else if(command=='fs'){ctx.fillStyle=arguments[0]}else if(command=='j'){ctx.lineJoin=arguments[0]}else if(command=='l'){ctx.lineTo(arguments[0],arguments[1])}else if(command=='m'){ctx.moveTo(arguments[0],arguments[1])}else if(command=='q'){ctx.quadraticCurveTo(arguments[0],arguments[1],arguments[2],arguments[3])}else if(command=='r'){ctx.fillRect(arguments[0],arguments[1],arguments[2],arguments[3])}else if(command=='ss'){ctx.strokeStyle=arguments[0]}else if(command=='s'){ctx.stroke()}else if(command=='w'){ctx.lineWidth=arguments[0]}else if(command=='/'){}else if(command==''){}}}
+            function jCanvasDraw(canvas,ctx,frame){
+              var commands=frame.split(',');
+              for(var i=0;i<commands.length;i++){
+                var temp=commands[i].split(':');
+                var command=temp[0];
+                var arguments=new Array();
+              for(var j=1;j<temp.length;j++){
+                arguments[j-1]=temp[j]
+              }
+              if(command=='a'){
+                if(arguments[5]==''){
+                  ctx.arc(arguments[0],arguments[1],arguments[2],arguments[3],arguments[4])
+                } else{
+                ctx.arc(arguments[0],arguments[1],arguments[2],arguments[3],arguments[4],arguments[5])
+                }
+              } else if(command=='at'){
+                ctx.arcTo(arguments[0],arguments[1],arguments[2],arguments[3],arguments[4])
+              } else if(command=='b'){
+                ctx.beginPath()
+              } else if(command=='c'){
+                ctx.closePath()
+              } else if(command=='cs'){ctx.clearRect(0,0,canvas.width,canvas.height)}else if(command=='cw'){ctx.canvas.width=ctx.canvas.width}else if(command=='f'){ctx.fill()}else if(command=='fs'){ctx.fillStyle=arguments[0]}
+                else if(command=='j'){ctx.lineJoin=arguments[0]}else if(command=='l'){ctx.lineTo(arguments[0],arguments[1])}else if(command=='m'){ctx.moveTo(arguments[0],arguments[1])}else if(command=='q'){
+                  ctx.quadraticCurveTo(arguments[0],arguments[1],arguments[2],arguments[3])}else if(command=='r'){ctx.fillRect(arguments[0],arguments[1],arguments[2],arguments[3])}else if(command=='ss'){
+                    ctx.strokeStyle=arguments[0]}else if(command=='s'){ctx.stroke()}else if(command=='w'){ctx.lineWidth=arguments[0]}else if(command=='/'){}else if(command==''){}
+                  }
+                }
         </script>
         <link href="http://fonts.googleapis.com/css?family=Anonymous+Pro:400,700" rel="stylesheet" type="text/css">
         <link href="css/main.css" rel="stylesheet" type="text/css">
@@ -72,8 +98,8 @@
                     </div>
                     <div class="column-right width-third text-right mobile-text-center no-mobile-margin no-mobile-padding">
                         <p>
+                            <a href="https://github.com/cipherboy" target="_blank">GitHub - cipherboy</a><br>
                             <!--<a href="http://ubuntuforums.org/member.php?u=1066963" target="_blank">Ubuntu Forums</a><br>-->
-                            <a href="https://github.com/cipherboy" target="_blank">GitHub</a><br>
                             <!--<a href="https://www.linkedin.com/pub/alexander-scheel/105/514/807" target="_blank">LinkedIn</a><br>-->
                         </p>
                     </div>
@@ -103,7 +129,7 @@
                 <section id="tech-content" class="clear main-section">
                     <p>
                         <b>Programming Languages: </b><br>
-                            <span class="indent">Go, Ruby, <!-- CoffeeScript, Rust <== Dream languages  ||  Old languages ==>  -->Python, XML/HTML5, CSS3, JavaScript, PHP, <!-- okay so MySQL, XML, and JSON aren't really languages, but Perl soon again, Bash doesn't really count, and for class work ==> -->C, C++, Assembly, Java</span><br>
+                            <span class="indent">Go, Ruby, Python, XML/HTML5, CSS3, JavaScript, PHP, C, C++, Assembly, Java <!-- CoffeeScript, Rust <== Dream languages  ||  Old languages ==>  --><!-- okay so MySQL, XML, and JSON aren't really languages, but Perl soon again, Bash doesn't really count, and for class work ==> --></span><br>
                         <b>Operating Systems: </b>Linux [Gentoo, Fedora, Debian], Mac OS X, Windows (XP - 10)<br>
                         <b>Desktop Environments: </b>Cinnamon, Screen, Fluxbox, GNOME Shell, Unity, KDE<br>
                         <b>Project Management: </b>Git, <a href="http://github.com/cipherboy/" title="Go to Alexander Scheel's GitHub profile" target="_blank">GitHub</a>, Make<br>
@@ -120,18 +146,22 @@
                 <section id="work-content" class="main-section">
                     <h4 class="products-subtitle"><a href="http://www.ece.iastate.edu/research/centers-institutes-and-laboratories/internet-scale-event-and-attack-generation-environment/" target="_blank">ISEAGE</a><span class="subtitle-dates">October 2016 - present</span></h4>
                     <p class="products-text">
-                        <b>ISEAGE</b> is a security research lab at ISU which runs five Cyber Defense Competitions a year. Developed scenario base VM images, exploitable backdoors, and competition anomalies for use in an isolated competition environment. Roles included Red Team helper and Green Team Lead.<br>
+                        <b>ISEAGE</b> is a security research lab at ISU which runs five Cyber Defense Competitions a year.<br>
+                        <canvas class="bullet" width="100" height="100">&bull;</canvas>Developed scenario VM images, exploitable backdoors, and competition anomalies for use in an isolated environment.<br>
+                        <canvas class="bullet" width="100" height="100">&bull;</canvas>Competition roles include Red Team Assistant Lead and Green Team Lead.<br>
                     </p>
                     <br>
                     <h4 class="products-subtitle"><a href="https://www.ibm.com/marketplace/cloud/managed-cloud/us/en-us" target="_blank">IBM Cloud Managed Services</a><span class="subtitle-dates">May 2016 - August 2016</span></h4>
                     <p class="products-text">
-                        <b>CMS</b> is a portion of IBM providing managed services on top of a diverse cloud platform for hundreds of companies. Developed tooling for compliance, security, and automation.<br>
+                        <b>CMS</b> is a portion of IBM providing managed services on top of a diverse cloud platform for hundreds of companies.<br>
+                        <canvas class="bullet" width="100" height="100">&bull;</canvas>Automation of compliance and security; improved developer workflow and auditing of compliance with Nessus and AppScan on Source.<br>
                         <canvas class="bullet" width="100" height="100">&bull;</canvas>Technical mentorship under Steven J. Munroe. Optimizations for SHA-3 on Power8+ assembly and vector instructions.
                     </p>
                     <br>
                     <h4 class="text-bluework-subtitle"><a href="http://www.rochesterclinic.com/" title="Go to RochesterClinic.com" target="_blank">Rochester Clinic</a><span class="subtitle-dates">2014-2015</span></h4>
                     <p class="work-text">
-                        <b>Rochester Clinic</b> is a family owned clinic based in Rochester, Minnesota. Duties included development, application troubleshooting, installation of new systems, and virus removal on a mixture of Windows platforms.<br>
+                        <b>Rochester Clinic</b> is a family owned clinic based in Rochester, Minnesota.<br>
+                        <canvas class="bullet" width="100" height="100">&bull;</canvas>Website development, application troubleshooting, new system installation.<br>
                         <canvas class="bullet" width="100" height="100">&bull;</canvas><b>Lead Patient Data Migration</b> of 12k records to a new EMR provider. Database manipulation and CSV generation using Ruby, implemented <a href="http://www.hl7.org/implement/standards/product_brief.cfm?product_id=258" title="Go to HL7's description of C-CDA" target="_blank">C-CDA</a> compliant documents from specification, programatic XML-to-PDF rendering.<br>
                         <!--<canvas class="bullet" width="100" height="100">&bull;</canvas><b>Tech support: </b>providing technical support to a variety of staff.<br>-->
                         <!--<canvas class="bullet" width="100" height="100">&bull;</canvas><b>Wordpress Migration: </b>converting an existing DreamWeaver-based site design to WordPress.<br> New website. -->
@@ -171,7 +201,7 @@
                     </p>
                     <h4 class="text-blueprojects-subtitle"><a href="https://github.com/SS-03-MAC/SS-03_MAC" target="_blank">COMS 309</a> - EduTLS<span class="subtitle-dates">2016</span></h4>
                     <p class="projects-text">
-                        TLS 1.2 library implemented in C++.
+                        TLS 1.2 library implemented in C++ as part of an API-based web framework.
                     </p>
                     <h4 class="text-blueprojects-subtitle"><a href="https://github.com/cipherboy/crypto-collection" target="_blank">crypto-collection</a><span class="subtitle-dates">present</span></h4>
                     <p class="projects-text">
@@ -350,6 +380,11 @@
             </div>
             <div class="clear"><p>&nbsp;</p></div>
         </footer>-->
+        <footer>
+          <p>
+            <br>
+          </p>
+        </footer>
         <script type="text/javascript">
             var bullets = document.getElementsByTagName('canvas');
             for (var bid in bullets) {
